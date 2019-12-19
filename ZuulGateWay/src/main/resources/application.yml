@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 80
+
+
+zuul:
+  retryable: true   #打开重试
+  routes:
+    userprovider001:
+      path: /userprovider001/**
+      url: http://localhost:9003/
+    userprovider002:
+      path: /userprovider002/**
+      url: http://localhost:9004/
+    routes:
+      userprovider:
+        path: /service/**
+        service-id: USERPROVIDER
+  host:
+    connect-timeout-millis: 300000
+    socket-timeout-millis: 600000
+ribbon:
+  ConnectionTimeOut: 5000
+  ReadTimeout: 5000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetriesNextServer: 1
+  MaxAutoRetries: 1
+#设定Hystrix熔断超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+
+

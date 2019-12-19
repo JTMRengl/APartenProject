@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JTMRengl/java1203-configserver/
+          search-paths: offcn/config-repo
+          username: JTMRengl
+          password: CuiSM19820508
+server:
+  port: 7001
+
+# 配置服务注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+
