@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/JTMRengl/java1203-configserver/
+          uri: https://github.com/JTMRengl/Spring-config-1705c.git/
           search-paths: offcn/config-repo
           username: JTMRengl
           password: CuiSM19820508

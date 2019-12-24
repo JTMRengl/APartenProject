@@ -8,9 +8,9 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class AppStartApplication {
+public class UserWeb01Application {
     public static void main(String[] args) {
-        SpringApplication.run(AppStartApplication.class, args);
+        SpringApplication.run( UserWeb01Application.class, args);
     }
 
     @Bean

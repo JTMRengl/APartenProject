@@ -20,8 +20,8 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @Value("${ProviderVersion}")
-    private String ProviderVersion;
+    //@Value("${ProviderVersion}")
+    //private String ProviderVersion;
 
     /***
      * 获取全部用户信息
@@ -34,7 +34,7 @@ public class UserController {
         List<User> list = userService.getUserList();
         map.put("list", list);
         //String ProviderVersion="用户服务UserProvdier001:0.01V";
-        map.put("ProviderVersion", ProviderVersion);
+        //map.put("ProviderVersion", ProviderVersion);
 
         try {
             //让主线程随机睡眠0--1200毫秒，模拟发生熔断

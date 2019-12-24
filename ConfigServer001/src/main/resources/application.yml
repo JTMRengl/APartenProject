@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/JTMRengl/java1203-configserver/
+          uri: https://github.com/JTMRengl/Spring-config-1705c.git/
           search-paths: offcn/config-repo
           username: JTMRengl
           password: CuiSM19820508
@@ -16,5 +16,5 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+      defaultZone: http://eureka1:10086/eureka,http://eureka1:10087/eureka
 

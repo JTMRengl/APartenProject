@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: UserWeb04
   cloud:
     config:
       discovery:
@@ -6,7 +8,6 @@ spring:
         service-id: config-server
       profile: test
       label: master
-
 
 
 

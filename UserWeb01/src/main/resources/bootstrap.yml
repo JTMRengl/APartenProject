@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: UserWeb01
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: test
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:10086/eureka,http://eureka1:10087/eureka
